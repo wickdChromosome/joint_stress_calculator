@@ -1,0 +1,23 @@
+After backchecking our code by hand, we found that the values were very close to the ones calculated by the script.
+The small difference is most likely due to the linear distribution we had to assume for the deltoidal muscle angles in order to be able to make calculations at every angle of the arm.
+
+(hopefully pulls up code)
+
+The whole script is written in python with numpy and sympy doing most the heavy lifting. The UI is written in appJar, with matplotlib integration.
+After entering the Height, Weight, dumbbell weight of the user, things such as muscle stress can be calculated.
+
+(Clicks Muscle force button)
+
+As you can see, the Muscles Tension is exactly the opposite of what we would expect. We believe this may be due to us assuming that the deltoidal muscle angle goes down as the angle of the arm goes down. This goes for all the graphs our script generates. We assumed this based on us finding data that the deltoidal muscle angle was 10 degrees at a 90 degree arm angle.
+
+(Clicks Muscle Stress button)
+
+The Muscle stress is calculated by using muscle scaling, using a PCSA value we found for the deltoidal muscle group.
+
+(Clicks Joint X and Y)
+
+The X and Y joint forces behave as expected, except for the data points being switched around
+
+(Clicks radial dist)
+
+Lastly, we wanted to plot how the COM of the whole arm changes during the lifting. As expected, the COM moves further out on the arm as it is being raised.
